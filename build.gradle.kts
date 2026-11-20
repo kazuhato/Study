@@ -1,0 +1,17 @@
+import org.jetbrains.intellij.platform.gradle.TestFrameworkType
+
+plugins {
+    id("org.jetbrains.kotlin.jvm")
+    id("org.jetbrains.changelog")
+    id("org.jetbrains.intellij.platform")
+}
+
+dependencies {
+    implementation("org.apache.poi:poi-ooxml:5.3.0")
+    testImplementation(libs.junit)
+
+    intellijPlatform {
+        intellijIdea("2026.2.4")
+        testFramework(TestFrameworkType.Platform)
+    }
+}

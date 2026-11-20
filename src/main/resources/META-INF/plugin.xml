@@ -1,0 +1,22 @@
+<idea-plugin>
+    <id>com.example.StudyNotesExporter</id>
+    <name>StudyNotesExporter</name>
+    <vendor>StudyNotes</vendor>
+
+    <description><![CDATA[
+        Exports selected text from the editor into C:\cpp\studyfile.docx with a blank paragraph separator.
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <actions>
+        <action id="StudyNotesExporter.ExportSelection"
+                class="com.example.studynotesexporter.ExportSelectionAction"
+                text="Export Selection to DOCX"
+                description="Export selected editor text into a .docx document">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+            <keyboard-shortcut keymap="$default"
+                               first-keystroke="control alt shift O"/>
+        </action>
+    </actions>
+</idea-plugin>
